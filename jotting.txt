@@ -1,0 +1,19 @@
+//ASYNC FILE SYSTEM
+readFile or writeFile both take the address of the file you want to read or new address you want to write in.
+they both take "utf8"( This is the meaning of “UTF”, or “Unicode Transformation Format.”) as their second argument.
+and lastly a callback function with two parameters (err, result)
+
+//SYNC FILE SYSTEM
+readFileSync or writeFileSync both take the address of the file you want to read or new address you want to write in.
+they both take "utf8"( This is the meaning of “UTF”, or “Unicode Transformation Format.”) as their second argument.
+writeFileSync can also take {flag: 'a'} as the third parameter to concatinate.
+
+//http request 
+after require.
+we can create server using http.createServer which takes a call back funtion that has two parameters req and res.
+adding '.listen(5000)' will give where the server should run locally.
+res.write('sdfew') can be use to pring on the browser which usually comes with res.end()
+
+
+// PACKAGE.JSON 
+package.json tells stores information about the project(i.e you see numbers of dependencies you have)
