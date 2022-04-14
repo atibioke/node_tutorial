@@ -17,3 +17,6 @@ res.write('sdfew') can be use to pring on the browser which usually comes with r
 
 // PACKAGE.JSON 
 package.json tells stores information about the project(i.e you see numbers of dependencies you have)
+
+// Installing globally 
+npm install -g <package-name>
