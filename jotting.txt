@@ -20,3 +20,5 @@ package.json tells stores information about the project(i.e you see numbers of d
 
 // Installing globally 
 npm install -g <package-name>
+
+//EVENT LOOP
