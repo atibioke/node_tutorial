@@ -49,3 +49,6 @@ npm install -g <package-name>
 // "this is the end"
 // "Callback 1: this is a msg from call back"
 // "Callback 2: this is a msg from call back"
+
+
+The Node.js JavaScript code runs on a single thread. There is just one thing happening at a time.
