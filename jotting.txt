@@ -52,3 +52,5 @@ npm install -g <package-name>
 
 
 The Node.js JavaScript code runs on a single thread. There is just one thing happening at a time.
+You mainly need to be concerned that your code will run on a single event loop, 
+and write code with this thing in mind to avoid blocking it.
