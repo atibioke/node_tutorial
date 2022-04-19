@@ -67,3 +67,46 @@ Almost all the I/O primitives in JavaScript are non-blocking.
 Network requests, filesystem operations, and so on. Being blocking is the exception, 
 and this is why JavaScript is based so much on callbacks, and more recently on promises 
 and async/await.
+
+
+//Example
+const foo = () => {
+  console.log('foo')
+  setTimeout(bar, 0)
+  new Promise((resolve, reject) =>
+    resolve('should be right after baz, before bar')
+  ).then(resolve => console.log(resolve))
+  baz()
+}
+
+foo()
+
+//Output
+foo
+baz
+should be right after baz, before bar.
+bar
+//HOW IT ACTUALLY WORKS
+foo() IN
+console.log('foo') IN
+console.log('foo') OUT
+setTimeout() IN
+setTimeout() OUT
+new Promise((resolve, reject) =>) IN
+resolve('should be right after baz, before bar') IN
+resolve('should be right after baz, before bar') OUT
+new Promise((resolve, reject) =>) OUT
+baz() IN
+console.log('baz') IN
+console.log('baz') OUT
+baz() OUT
+resolve => console.log(resolve) IN
+console.log('should be right after baz, before bar') IN
+console.log('should be right after baz, before bar') OUT
+resolve => console.log(resolve) OUT
+bar() IN
+console.log('bar') IN
+console.log('bar') OUT
+bar() OUT
+foo() OUT
+empty
