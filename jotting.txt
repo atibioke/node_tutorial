@@ -163,7 +163,15 @@ if not all of these problems—the tradeoff being that the most
       the async function will always complete asynchronously.
 
 
+//Example
+async function foo() {
+    await 1
+}
 
+//IS THE SAME AS
+function foo() {
+    return Promise.resolve(1)then(() => undefined)
+}
 
 
 
