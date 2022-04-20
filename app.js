@@ -15,7 +15,7 @@ const start = async () => {
       console.log(first);
     }
   };
-  
+   
   start();
 
 // function getText(path) {
