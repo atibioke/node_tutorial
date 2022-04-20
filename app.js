@@ -1,6 +1,6 @@
 const { readFile } = require("fs");
 
-function getText(path)  {
+function getText(path) {
   return new Promise((resolve, reject) => {
     readFile(path, "utf8", (err, data) => {
       if (err) {
@@ -10,21 +10,16 @@ function getText(path)  {
       }
     });
   });
+}
+
+const start = async () => {
+  try {
+    const first = await getText("./content/first.txt");
+    console.log(first);
+  } catch (error) {
+    console.log(first);
+  }
 };
-
-const start =  async () => {
-
-    try {
-        const first = await getText('./content/first.txt')
-        console.log(first);
-    }
-    catch (error) {
-        console.log(first);  
-    }
-      
-      
-    }
-
 
 start();
 
