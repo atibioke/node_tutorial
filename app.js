@@ -12,12 +12,19 @@ function getText(path)  {
   });
 };
 
-function start(){
-    return async () => {
+const start =  async () => {
+
+    try {
         const first = await getText('./content/first.txt')
         console.log(first);
     }
-}
+    catch (error) {
+        console.log(first);  
+    }
+      
+      
+    }
+
 
 start();
 
