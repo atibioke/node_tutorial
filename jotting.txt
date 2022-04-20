@@ -110,3 +110,49 @@ console.log('bar') OUT
 bar() OUT
 foo() OUT
 empty
+
+
+//PROMISE
+Note that () => x is short for () => { return x; }.
+
+//EXAMPLE OF SYNC AND ASYNC SYNTAX
+try {
+  const result = syncDoSomething();
+  const newResult = syncDoSomethingElse(result);
+  const finalResult = syncDoThirdThing(newResult);
+  console.log(`Got the final result: ${finalResult}`);
+} catch(error) {
+  failureCallback(error);
+}
+
+//ASYNC OF IT
+
+async function foo() {
+  try {
+    const result = await doSomething();
+    const newResult = await doSomethingElse(result);
+    const finalResult = await doThirdThing(newResult);
+    console.log(`Got the final result: ${finalResult}`);
+  } catch(error) {
+    failureCallback(error);
+  }
+}
+
+
+Using async/await addresses most, 
+if not all of these problems—the tradeoff being that the most
+ common mistake with that syntax is forgetting the await keyword.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
