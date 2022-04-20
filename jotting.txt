@@ -143,6 +143,15 @@ Using async/await addresses most,
 if not all of these problems—the tradeoff being that the most
  common mistake with that syntax is forgetting the await keyword.
 
+ Async functions can contain zero or more await expressions.
+  Await expressions make promise-returning functions behave as
+   though they're synchronous by suspending execution until the 
+   returned promise is fulfilled or rejected. 
+   The resolved value of the promise is treated as the
+    return value of the await expression. Use of async and 
+    await enables the use of ordinary try / catch blocks around 
+    asynchronous code.
+
 
 
 
