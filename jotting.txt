@@ -16,7 +16,7 @@ res.write('sdfew') can be use to pring on the browser which usually comes with r
 
 
 // PACKAGE.JSON 
-package.json tells stores information about the project(i.e you see numbers of dependencies you have)
+package.json help stores information about the project(i.e you see numbers of dependencies you have)
 
 //PACKAGE-LOCK.JSON 
 There we have all the versions for the dependencies and other packages.
