@@ -154,6 +154,16 @@ if not all of these problems—the tradeoff being that the most
 
 
 
+    The body of an async function can be thought of as being 
+    split by zero or more await expressions. Top-level code, 
+    up to and including the first await expression (if there is one), 
+    is run synchronously. In this way, an async function without
+     an await expression will run synchronously. If there is an 
+     await expression inside the function body, however,
+      the async function will always complete asynchronously.
+
+
+
 
 
 
