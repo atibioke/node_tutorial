@@ -170,7 +170,7 @@ async function foo() {
 
 //IS THE SAME AS
 function foo() {
-    return Promise.resolve(1)then(() => undefined)
+    return Promise.resolve(1).then(() => undefined)
 }
 
 
