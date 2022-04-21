@@ -1,4 +1,32 @@
 
+
+let p = new Promise((resolve, reject) => {
+    let a = 2 + 1;
+    if (a == 2) {
+        resolve('success')
+    } else {
+        reject('failed')
+    }
+})
+
+const asyncSample = async () => {
+    try {
+        const result = await p;
+        console.log(result);
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+asyncSample()
+
+
+
+
+
+
+
+
 // let p = new Promise((resolve, reject) => {
 //     let a = 1+1;
 //     if(a == 2){
@@ -12,20 +40,7 @@
 // .then((message) => console.log('This is a resolve ' + message + ' message'))
 // .catch((message) => console.log('This is a reject ' + message))
 
-const addValues = async ()=>{
-   await new Promise((resolve, reject) => {
-    let a = 1+1;
-    if(a == 2){
-        resolve('success')
-    }else{
-        reject('failed')
-    }  
-})
-}
 
-addValues()
-.then((message) => console.log('This is a resolve ' + message + ' message'))
-.catch((message) => console.log('This is a reject ' + message))
 
 // const { readFile, writeFile } = require("fs");
 // const util = require("util");
