@@ -1,7 +1,7 @@
 
-const EventEmitter = require('events')
+const eventBox = require('events')
 
-const customEmitter = new EventEmitter()
+const customEmitter = new eventBox()
 
 customEmitter.on('response', ()=>{
     console.log(`data recieved`);
