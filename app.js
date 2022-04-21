@@ -1,7 +1,7 @@
 
 
 let p = new Promise((resolve, reject) => {
-    let a = 2 + 1;
+    let a = 1 + 1;
     if (a == 2) {
         resolve('success')
     } else {
@@ -12,7 +12,11 @@ let p = new Promise((resolve, reject) => {
 const asyncSample = async () => {
     try {
         const result = await p;
+        const result1 = await new Promise((resolve) => setTimeout(() => resolve('1')))
+        const result2 = await new Promise((resolve) => setTimeout(() => resolve('2')))
         console.log(result);
+        console.log(result1);
+        console.log(result2);
     } catch (error) {
         console.log(error)
     }
