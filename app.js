@@ -8,7 +8,9 @@ let p = new Promise((resolve, reject) => {
     }
 })
 
-p.then((message) => console.log('This is a resolve ' + message + ' message')).catch((message) => console.log('This is a reject ' + message))
+p
+.then((message) => console.log('This is a resolve ' + message + ' message'))
+.catch((message) => console.log('This is a reject ' + message))
 
 
 // const { readFile, writeFile } = require("fs");
