@@ -19,13 +19,13 @@ const addValues = async ()=>{
         resolve('success')
     }else{
         reject('failed')
-    }
+    }  
 })
 }
 
-// addValues
-// .then((message) => console.log('This is a resolve ' + message + ' message'))
-// .catch((message) => console.log('This is a reject ' + message))
+addValues()
+.then((message) => console.log('This is a resolve ' + message + ' message'))
+.catch((message) => console.log('This is a reject ' + message))
 
 // const { readFile, writeFile } = require("fs");
 // const util = require("util");
