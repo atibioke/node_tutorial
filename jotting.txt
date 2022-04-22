@@ -173,7 +173,12 @@ function foo() {
     return Promise.resolve(1).then(() => undefined)
 }
 
+//EVENTS 
+const eventBox = require('events')
 
+After requiring event we create new instance of it, thend from the instance we can
+add a listener like 'on' and the rest where 'on' takes two parameters 
+first 'name for it' and a callback function.
 
 
 
