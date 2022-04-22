@@ -1,6 +1,8 @@
 
 const eventBox = require('events')
 
+console.log(eventBox);
+
 const customEmitter = new eventBox()
 
 customEmitter.on('response', ()=>{
