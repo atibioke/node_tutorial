@@ -24,6 +24,9 @@ There we have all the versions for the dependencies and other packages.
 // Installing globally 
 npm install -g <package-name>
 
+//TO RUN ANY OF MY FILES.
+node <filename.js>
+
 //EVENT LOOP
 
 (function() {
@@ -191,11 +194,6 @@ add a listener like 'on' and the rest where 'on' takes two parameters
 first 'name for it' and a callback function.
 
 
-//TYPES OF STREAMS IN NODEJS
-Writeable
-Readable
-Duplex
-Transform  
 
 
 

@@ -1,4 +1,36 @@
-const http = require('http')
+const { createReadStream } = require('fs')
+
+const stream = createReadStream('./content/big.txt')
+
+stream.on('data',  (result) => {
+    console.log(result);
+})
+
+stream.on('error', (err) =>{
+    console.log(err);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const http = require('http')
 
 
 // const server = http.createServer((req, res) => {
@@ -7,14 +39,14 @@ const http = require('http')
 
 //USING EVENTS EMITTER.
 
-const server = http.createServer
+// const server = http.createServer
 
-server.on('request', (req, res) => {
-    res.end('Welcome!')
-})
+// server.on('request', (req, res) => {
+//     res.end('Welcome!')
+// })
 
 
-server.listen(5000)
+// server.listen(5000)
 
 
 
