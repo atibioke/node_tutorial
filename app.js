@@ -1,14 +1,11 @@
-const { createReadStream } = require('fs')
+const http = require('http')
 
-const stream = createReadStream('./content/big.txt')
+const fs = require('fs')
 
-stream.on('data',  (result) => {
-    console.log(result);
-})
-
-stream.on('error', (err) =>{
-    console.log(err);
-})
+http.createServer((req, res)=>{
+    const text = fs.readFileSync('./content/big.txt')
+    res.end(text)
+}).listen(5000);
 
 
 
