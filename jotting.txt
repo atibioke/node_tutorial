@@ -191,7 +191,7 @@ add a listener like 'on' and the rest where 'on' takes two parameters
 first 'name for it' and a callback function.
 
 
-//STREAMS IN NODEJS
+//TYPES OF STREAMS IN NODEJS
 Writeable
 Readable
 Duplex
