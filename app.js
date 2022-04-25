@@ -1,40 +1,23 @@
-const http = require('http')
+const http = require("http");
 
-const fs = require('fs')
+const fs = require("fs");
 
-http.createServer((req, res)=>{
+http
+  .createServer((req, res) => {
     // const text = fs.readFileSync('./content/big.txt')
     // res.end(text)
-    const fileStream = fs.createWriteStream('./content/big.txt', {encoding: 'utf8'});
-    fileStream.on('open', ()=>{
-        fileStream.pipe(res)
-    })
-    fileStream.on('error', (err)=>{res.end(err)
-    })
-}).listen(5000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    const fileStream = fs.createReadStream("./content/big.txt",  "utf8"
+    );
+    fileStream.on('open', () => {
+      fileStream.pipe(res)
+    });
+    fileStream.on('error', (err) => {
+      res.end(err);
+    });
+  })
+  .listen(5000);
 
 // const http = require('http')
-
 
 // const server = http.createServer((req, res) => {
 //     res.end('Welcome')
@@ -48,12 +31,7 @@ http.createServer((req, res)=>{
 //     res.end('Welcome!')
 // })
 
-
 // server.listen(5000)
-
-
-
-
 
 // let p = new Promise((resolve, reject) => {
 //     let a = 10;
@@ -79,13 +57,6 @@ http.createServer((req, res)=>{
 
 // asyncSample()
 
-
-
-
-
-
-
-
 // let p = new Promise((resolve, reject) => {
 //     let a = 1+1;
 //     if(a == 2){
@@ -99,18 +70,6 @@ http.createServer((req, res)=>{
 // .then((message) => console.log('This is a resolve ' + message + ' message'))
 // .catch((message) => console.log('This is a reject ' + message))
 
-
-
-
-
-
-
-
-
-
-
-
-
 // function getText(path) {
 //   return new Promise((resolve, reject) => {
 //     readFile(path, "utf8", (err, data) => {
@@ -121,9 +80,7 @@ http.createServer((req, res)=>{
 //       }
 //     });
 //   });
-// }  
-
-
+// }
 
 // getText("./content/first.txt")
 //   .then((result) => {
