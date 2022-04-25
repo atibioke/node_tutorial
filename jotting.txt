@@ -168,6 +168,7 @@ async function foo() {
     await 1
 }
 
+
 //IS THE SAME AS
 function foo() {
     return Promise.resolve(1).then(() => undefined)
