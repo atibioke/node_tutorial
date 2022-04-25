@@ -1,19 +1,20 @@
+const http = require('http')
 
-const eventBox = require('events')
 
-console.log(eventBox);
+// const server = http.createServer((req, res) => {
+//     res.end('Welcome')
+// })
 
-const customEmitter = new eventBox()
+//USING EVENTS EMITTER.
 
-customEmitter.on('response', ( name, id)=>{
-    console.log(`data recieved by user ${name} with id: ${id}`);
+const server = http.createServer
+
+server.on('request', (req, res) => {
+    res.end('Welcome!')
 })
-customEmitter.on('response', ()=>{
-    console.log(`some other logic code`);
-})
 
-customEmitter.emit('response', 'rasgan', 28)
 
+server.listen(5000)
 
 
 
