@@ -115,6 +115,15 @@ empty
 //PROMISE
 Note that () => x is short for () => { return x; }.
 
+const promise = new Promise(function(resolve, reject) {
+    //do a thing , possibly async.
+    if(everything turned out fine) {
+        resolve('stuff worded');
+    }else {
+        reject(Error('it broke'))
+    }
+})
+
 //EXAMPLE OF SYNC AND ASYNC SYNTAX
 try {
   const result = syncDoSomething();
