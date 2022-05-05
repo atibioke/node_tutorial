@@ -89,6 +89,8 @@ foo
 baz
 should be right after baz, before bar.
 bar
+
+
 //HOW IT ACTUALLY WORKS
 foo() IN
 console.log('foo') IN
@@ -118,7 +120,7 @@ empty
 //PROMISE
 Note that () => x is short for () => { return x; }.
 
-const promise = new Promise(function(resolve, reject) {
+const promise = new Promise((resolve, reject) {
     //do a thing , possibly async.
     if(everything turned out fine) {
         resolve('stuff worded');
@@ -197,7 +199,8 @@ first 'name for it' and a callback function.
 //EXPRESS.JS
 // API VS SSR.
 
-
+//CONNECTING FRONTEND TO BACKEND
+app.use(express.static('path to the folder of our frontend pages.'))
 
 
 
