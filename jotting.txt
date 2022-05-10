@@ -249,3 +249,9 @@ const example = async ()=>{
 example()
 
 OR
+
+async function example(){
+  return
+}
+
+example()
